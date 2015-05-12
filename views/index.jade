@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+  head
+    title= pageTitle
+    link(rel="stylesheet", type="text/css", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css")
+    link(rel="stylesheet", type="text/css", href="/css/site.css")
+    
+  body
+    div(class="content")
+        h1 Weather App
+        div(class="results")
+    script(type='text/javascript', src="https://maps.googleapis.com/maps/api/js?sensor=false")
+    script(type='text/javascript', src="https://code.jquery.com/jquery-1.11.3.min.js")
+    script(type='text/javascript', src="/js/MapEngine.js")
+    script(type='text/javascript', src="/js/UIEngine.js")
+    script(type='text/javascript').
+      UIEngine.init({location: !{JSON.stringify(locale)}, period: !{JSON.stringify(period)} });
